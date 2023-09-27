@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  server:
+    # docker/server/のDockerfileを使って、コンテナをビルドする
+    build: ./docker/server/
+    # コンテナ名を指定
+    container_name: ubuntu-linux-2647
+    # フォアグラウンドプロセスがないとコンテナが自動終了してしまう為、標準入出力先のデバイスを追加
+    tty: true
+    stdin_open: true
+    # easyrsa3ディレクトリをコンテナ内の/etc/easyrsa3にマウント
+    # volumes:
+    #   - ./easyrsa3:/etc/easyrsa3
