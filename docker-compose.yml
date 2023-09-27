@@ -9,6 +9,6 @@ services:
     # フォアグラウンドプロセスがないとコンテナが自動終了してしまう為、標準入出力先のデバイスを追加
     tty: true
     stdin_open: true
-    # easyrsa3ディレクトリをコンテナ内の/etc/easyrsa3にマウント
+    # 特定のディレクトリをコンテナ内にマウント
     # volumes:
-    #   - ./easyrsa3:/etc/easyrsa3
+    #   - ./hoge:/fuga
